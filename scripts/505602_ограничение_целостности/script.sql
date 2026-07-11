@@ -54,5 +54,5 @@ CREATE TABLE comments
     id        BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     text      TEXT   NOT NULL CHECK (CHAR_LENGTH(text) > 0),
     author_id BIGINT NOT NULL REFERENCES users (id),
-    item_id   BIGINT NOT NULL REFERENCES items (id),
+    item_id   BIGINT NOT NULL REFERENCES items (id)
 );
