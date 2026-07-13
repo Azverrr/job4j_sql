@@ -1,0 +1,5 @@
+SELECT c.id, c.name, ce.name, cb.name, ct.name
+FROM cars AS c
+         INNER JOIN car_bodies AS cb on cb.id = c.body_id
+         INNER JOIN car_engines AS ce on ce.id = c.engine_id
+         INNER JOIN car_transmissions AS ct on ct.id = c.transmission_id
